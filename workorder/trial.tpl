@@ -133,6 +133,8 @@ img.barcode {
     {% for Workorder in Workorders %}
         <div class="workorder {% if not loop.last %} pagebreak{% endif %}">
             
+             <img height="50" width="250" class="barcode" src="/barcode.php?type=receipt&number={{Workorder.systemSku}}">
+             
             <div class="header">
                 {% if parameters.type == 'invoice' %}
                     {% if Workorder.Shop.ReceiptSetup.hasLogo == "true" %}
@@ -297,8 +299,6 @@ img.barcode {
                 </tbody>
             </table>
 
- <img height="50" width="250" class="barcode" src="/barcode.php?type=receipt&number={{Workorder.systemSku}}">
- 
             {% if parameters.type == 'invoice' %}
                 {% if Workorder.Shop.ReceiptSetup.workorderAgree|strlen > 0 %}
                     <div style="padding: 10px 0px">
