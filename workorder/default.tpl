@@ -28,7 +28,7 @@ body{
 
 .header h1 {
     text-align: center;
-    font-size: 10pt;
+    font-size: 12pt;
 }
 
 .header h3 {
@@ -38,7 +38,7 @@ body{
 
 .header h1 strong {
     border: 3px solid black;
-    font-size: 10pt;
+    font-size: 24pt;
     padding: 10px;
 }
 
@@ -129,6 +129,11 @@ table p {
 
 .notes h1 {
     margin: 1em 0 0;
+}
+
+img.barcode {
+    display: block;
+    margin: 2em auto;
 }
 
 {% endblock extrastyles %}
@@ -310,15 +315,7 @@ table p {
                 </tbody>
             </table>
 
-            {% if Workorder.note|strlen > 0 %}
-                <div class="notes">
-                    <h3>Notes:</h3>
-                    {{ Workorder.note|noteformat|raw }}
-                </div>
-            {% endif %}
-
-            
-            
+        
             {% if parameters.type == 'invoice' %}
                 {% if Workorder.Shop.ReceiptSetup.workorderAgree|strlen > 0 %}
                     <div style="padding: 10px 0px">
@@ -328,11 +325,16 @@ table p {
                         {{ Workorder.Customer.firstName}} {{ Workorder.Customer.lastName}}
                     </div>
             </div>
-                    <img height="50" width="250" class="barcode" src="/barcode.php?type=receipt&number={{Workorder.systemSku}}">
-                        img.barcode {
-                           display: block;
-                            margin: 2em auto;
-                            }
+
+            {% if Workorder.note|strlen > 0 %}
+                <div class="notes">
+                    <h3>Notes:</h3>
+                    {{ Workorder.note|noteformat|raw }}
+                </div>
+            {% endif %}
+
+            <img height="50" width="250" class="barcode" src="/barcode.php?type=receipt&number={{Workorder.systemSku}}">
+            
 
             {% endif %}
         {% endif %}
