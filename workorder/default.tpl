@@ -317,7 +317,7 @@ table p {
                 </div>
             {% endif %}
 
-            <img height="50" width="250" class="barcode" src="/barcode.php?type=receipt&number={{Workorder.systemSku}}">
+            
             
             {% if parameters.type == 'invoice' %}
                 {% if Workorder.Shop.ReceiptSetup.workorderAgree|strlen > 0 %}
@@ -328,11 +328,11 @@ table p {
                         {{ Workorder.Customer.firstName}} {{ Workorder.Customer.lastName}}
                     </div>
             </div>
-
-img.barcode {
-    display: block;
-    margin: 2em auto;
-}
+                    <img height="50" width="250" class="barcode" src="/barcode.php?type=receipt&number={{Workorder.systemSku}}">
+                        img.barcode {
+                           display: block;
+                            margin: 2em auto;
+                            }
 
             {% endif %}
         {% endif %}
