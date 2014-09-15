@@ -19,7 +19,7 @@ body{
 
 .header {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 .header p {
@@ -168,7 +168,6 @@ img.barcode {
                         Hook Out: {{Workorder.hookOut}}</h1>
                     {% endif %}
                 {% endif %}
-            </div>
             
             <div class="detail">
                 <h3>Customer:</h3>
@@ -197,8 +196,6 @@ img.barcode {
                 {% endfor %}
                 <h2>Started: {{Workorder.timeIn|correcttimezone|date ("m/d/y h:i a")}}<br />
                 Due on: {{Workorder.etaOut|correcttimezone|date ("m/d/y h:i a")}}</h2>
-            </div>
-
             <table class="lines">
                 <tr>
                     <th>Item/Labor</th>
@@ -317,7 +314,7 @@ img.barcode {
                         <br/>
                         {{ Workorder.Customer.firstName}} {{ Workorder.Customer.lastName}}
    
-            {% if Workorder.note|strlen > 50 %}
+            {% if Workorder.note|strlen > 0 %}
                 <div class="notes">
                     <h3>Notes:</h3>
                     {{ Workorder.note|noteformat|raw }}
