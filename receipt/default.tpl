@@ -83,7 +83,7 @@ td.amount { white-space: nowrap; }
 table.totals { text-align: right; }
 table.payments { text-align: right; }
 table.spacer { margin-top: 1em; }
-table tr.total td { font-weight: bold; }
+table tr.total td { font-weight: normal; }
 
 table td.amount { padding-left: 10px; }
 table td.quantity { padding-left: 10px; }
@@ -93,7 +93,7 @@ table.sale thead th { border-bottom: 1px solid black; }
 
 table div.line_description {
 	text-align: left;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 table div.line_note {
@@ -123,7 +123,7 @@ table.workorders div.line_serial {
 }
 
 table.workorders td.workorder div.line_note {
-	font-weight: bold;
+	font-weight: normal;
 	padding-left: 0px;
 }
 
@@ -144,7 +144,7 @@ dl {
 }
 
 dl dt { 
-	font-weight: bold;
+	font-weight: normal;
 	width: 80px;
 	float: left
 }
