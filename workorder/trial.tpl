@@ -168,7 +168,7 @@ img.barcode {
                         Hook Out: {{Workorder.hookOut}}</h1>
                     {% endif %}
                 {% endif %}
-                </div> 
+        </div> 
             <div class="detail">
                 <h3>Customer:</h3>
                 <p>{{ Workorder.Customer.firstName}} {{ Workorder.Customer.lastName}}</p>
@@ -197,7 +197,8 @@ img.barcode {
                 <h2>Started: {{Workorder.timeIn|correcttimezone|date ("m/d/y h:i a")}}<br />
                 Due on: {{Workorder.etaOut|correcttimezone|date ("m/d/y h:i a")}}</h2>
             <table class="lines">
-               <div>
+    <div>
+    
                 <tr>
                     <th>Item/Labor</th>
                     <th>Notes</th>
