@@ -38,7 +38,7 @@ body{
 
 .header h1 strong {
     border: 3px solid black;
-    font-size: 24pt;
+    font-size: 12pt;
     padding: 10px;
 }
 
