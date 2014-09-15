@@ -297,6 +297,8 @@ img.barcode {
                 </tbody>
             </table>
 
+ <img height="50" width="250" class="barcode" src="/barcode.php?type=receipt&number={{Workorder.systemSku}}">
+ 
             {% if parameters.type == 'invoice' %}
                 {% if Workorder.Shop.ReceiptSetup.workorderAgree|strlen > 0 %}
                     <div style="padding: 10px 0px">
