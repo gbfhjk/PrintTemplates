@@ -147,7 +147,7 @@ img.barcode {
             <div class="header">
                 {% if parameters.type == 'invoice' %}
                     {% if Workorder.Shop.ReceiptSetup.hasLogo == "true" %}
-                        <img class="header" src="{{ Workorder.Shop.ReceiptSetup.logo }}" height="{{ Workorder.Shop.ReceiptSetup.logoHeight }}" width="{{ Workorder.Shop.ReceiptSetup.logoWidth }}">
+                        <img class="header" src="{{ Workorder.Shop.ReceiptSetup.logo }}" height="{{ 100 }}" width="{{ 100 }}">
                     {% else %}
                     <h3>{{ Workorder.Shop.name }}</h3>
                     {% endif %}
@@ -316,9 +316,7 @@ img.barcode {
                         X_______________________________
                         <br/>
                         {{ Workorder.Customer.firstName}} {{ Workorder.Customer.lastName}}
-                    </div>
-            </div>
-
+   
             {% if Workorder.note|strlen > 50 %}
                 <div class="notes">
                     <h3>Notes:</h3>
