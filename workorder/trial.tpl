@@ -16,60 +16,49 @@ body{
     padding: 1px;
     font: normal 8pt 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
-
 .header {
     text-align: center;
     margin-bottom: 7px;
 }
-
 .header p {
     margin: 0;
 }
-
 .header h1 {
     text-align: center;
     font-size: 8pt;
 }
-
 .header h3 {
     font-size: 8pt;
     margin: 0;
 }
-
 .header h1 strong {
     border: 1px solid black;
     font-size: 8pt;
     padding: 1px;
 }
-
 .header img {
     display: block;
     margin: 4px auto 4px;
     height: {{ Workorder.Shop.ReceiptSetup.logoHeight }};
     width: {{ Workorder.Shop.ReceiptSetup.logoWidth }}
 }
-
 .detail h2 {
     margin: 0px 0px 10px 0px;
     padding: 0px;
     font-size: 8pt;
 }
-
 .detail h3 {
     margin: 0px 0px 10px 0px;
     padding: 0px;
     font-size: 8pt;
     text-decoration: underline;
 }
-
 .detail { 
     margin-bottom: 1em;
 }
-
 .detail p {
     margin: 0;
 }
-
 table.lines, table.totals {
     width: 100%;
     border-spacing:0;
