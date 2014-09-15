@@ -17,30 +17,30 @@ body {
 }
 
 .receipt {
-	font: normal 10pt “Helvetica Neue”, Helvetica, Arial, sans-serif;
+	font: normal 8pt “Helvetica Neue”, Helvetica, Arial, sans-serif;
 }
 
 h1 {
 	margin: .5em 0 0;
-	font-size: 12pt;
+	font-size: 8pt;
 	text-align: center;
 }
 
 p.date, p.copy {
-	font-size: 9pt;
+	font-size: 7pt;
 	margin: 0;
 	text-align: center;
 }
 
 p.details {
-	font-size: 10pt;
+	font-size: 8pt;
 	text-align: left;
 }
 
 h2 {
 	border-bottom: 1px solid black;
 	text-transform: uppercase;
-	font-size: 10pt;
+	font-size: 8pt;
 	margin: .5em 0 0;
 }
 
@@ -49,7 +49,7 @@ h2 {
 }
 
 .header h3 {
-	font-size: 12pt;
+	font-size: 8pt;
 	margin: 0;
 }
 
@@ -189,7 +189,7 @@ dl dd p { margin: 0; }
 
 	<div class="header">		
 		{% if Sale.Shop.ReceiptSetup.hasLogo == 'true' %}
-			<img src="{{Sale.Shop.ReceiptSetup.logo}}" width="{{Sale.Shop.ReceiptSetup.logoWidth}}" height="{{Sale.Shop.ReceiptSetup.logoHeight}}" class="logo">
+			<img src="{{Sale.Shop.ReceiptSetup.logo}}" width="{{150}}" height="{{100}}" class="logo">
 		{% else %}
 			<h3>{{ Sale.Shop.name }}</h3>
 		{% endif %}
@@ -313,9 +313,6 @@ dl dd p { margin: 0; }
 		<span class="indent">
 		{% for Phone in Sale.Customer.Contact.Phones.ContactPhone %}
 		{{Phone.useType}}: {{Phone.number}}<br />
-		{% endfor %}
-		{% for Email in Sale.Customer.Contact.Emails.ContactEmail %}
-		Email: {{Email.address}} ({{Email.useType}})<br />
 		{% endfor %}
 		</span>
 	{% endif %}
