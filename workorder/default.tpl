@@ -28,7 +28,7 @@ body{
 
 .header h1 {
     text-align: center;
-    font-size: 12pt;
+    font-size: 10pt;
 }
 
 .header h3 {
@@ -37,14 +37,14 @@ body{
 }
 
 .header h1 strong {
-    border: 3px solid black;
-    font-size: 24pt;
+    border: 1px solid black;
+    font-size: 10pt;
     padding: 10px;
 }
 
 .header img {
     display: block;
-    margin: 8px auto 4px;
+    margin: 4px auto 4px;
     height: {{ Workorder.Shop.ReceiptSetup.logoHeight }};
     width: {{ Workorder.Shop.ReceiptSetup.logoWidth }}
 }
