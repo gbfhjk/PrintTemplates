@@ -14,12 +14,12 @@ body{
 .workorder {
     margin: 0px;
     padding: 1px;
-    font: normal 10pt 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font: normal 8pt 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 .header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .header p {
@@ -28,18 +28,18 @@ body{
 
 .header h1 {
     text-align: center;
-    font-size: 10pt;
+    font-size: 8pt;
 }
 
 .header h3 {
-    font-size: 10pt;
+    font-size: 8pt;
     margin: 0;
 }
 
 .header h1 strong {
     border: 1px solid black;
-    font-size: 10pt;
-    padding: 10px;
+    font-size: 8pt;
+    padding: 1px;
 }
 
 .header img {
@@ -52,13 +52,13 @@ body{
 .detail h2 {
     margin: 0px 0px 10px 0px;
     padding: 0px;
-    font-size: 10pt;
+    font-size: 8pt;
 }
 
 .detail h3 {
     margin: 0px 0px 10px 0px;
     padding: 0px;
-    font-size: 10pt;
+    font-size: 8pt;
     text-decoration: underline;
 }
 
@@ -173,16 +173,10 @@ img.barcode {
             <div class="detail">
                 <h3>Customer:</h3>
                 <p>{{ Workorder.Customer.firstName}} {{ Workorder.Customer.lastName}}</p>
-                <p>{{ Workorder.Customer.Contact.Addresses.ContactAddress.address1 }}</p>
-                <p>{{ Workorder.Customer.Contact.Addresses.ContactAddress.address2 }}</p>
-                <p>{{ Workorder.Customer.Contact.Addresses.ContactAddress.city }}, {{ Workorder.Customer.Contact.Addresses.ContactAddress.state }} {{ Workorder.Customer.Contact.Addresses.ContactAddress.zip }}</p>
                 {% for ContactPhone in Workorder.Customer.Contact.Phones.ContactPhone %}
                     <p>{{ ContactPhone.number }} ({{ ContactPhone.useType }})</p>
                 {% endfor %}
-                {% for ContactEmail in Workorder.Customer.Contact.Emails.ContactEmail %}
-                    <p>{{ ContactEmail.address }}</p>
-                {% endfor %}
-                <br />
+                             <br />
                 {% for serializedID in Workorder.Serialized %}
                     <h3>Work Order Item:</h3>
                         <p>{% if Workorder.Serialized.description|strlen > 0 %}
@@ -325,7 +319,7 @@ img.barcode {
                     </div>
             </div>
 
-            {% if Workorder.note|strlen > 0 %}
+            {% if Workorder.note|strlen > 50 %}
                 <div class="notes">
                     <h3>Notes:</h3>
                     {{ Workorder.note|noteformat|raw }}
