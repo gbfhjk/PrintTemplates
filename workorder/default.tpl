@@ -52,13 +52,13 @@ body{
 .detail h2 {
     margin: 0px 0px 10px 0px;
     padding: 0px;
-    font-size: 11pt;
+    font-size: 10pt;
 }
 
 .detail h3 {
     margin: 0px 0px 10px 0px;
     padding: 0px;
-    font-size: 11pt;
+    font-size: 10pt;
     text-decoration: underline;
 }
 
@@ -315,7 +315,6 @@ img.barcode {
                 </tbody>
             </table>
 
-        
             {% if parameters.type == 'invoice' %}
                 {% if Workorder.Shop.ReceiptSetup.workorderAgree|strlen > 0 %}
                     <div style="padding: 10px 0px">
