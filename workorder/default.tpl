@@ -28,7 +28,7 @@ body{
 
 .header h1 {
     text-align: center;
-    font-size: 12pt;
+    font-size: 10pt;
 }
 
 .header h3 {
@@ -38,7 +38,7 @@ body{
 
 .header h1 strong {
     border: 3px solid black;
-    font-size: 12pt;
+    font-size: 10pt;
     padding: 10px;
 }
 
@@ -129,11 +129,6 @@ table p {
 
 .notes h1 {
     margin: 1em 0 0;
-}
-
-img.barcode {
-    display: block;
-    margin: 2em auto;
 }
 
 {% endblock extrastyles %}
@@ -334,6 +329,10 @@ img.barcode {
                     </div>
             </div>
 
+img.barcode {
+    display: block;
+    margin: 2em auto;
+}
 
             {% endif %}
         {% endif %}
