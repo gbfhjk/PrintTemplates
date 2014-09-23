@@ -88,8 +88,8 @@ table tr.total td { font-weight: normal; }
 table td.amount { padding-left: 10px; }
 table td.quantity { padding-left: 10px; }
 
-table.sale { border-bottom: 1px solid black; }
-table.sale thead th { border-bottom: 1px solid black; }
+table.sale 
+table.sale thead th
 
 table div.line_description {
 	text-align: left;
