@@ -33,7 +33,7 @@ Set any of the options in this section from 'false' to 'true' in order to enable
 
 {% set hide_customer_layaways = false %}        {# Hides Customer Layaway information at the bottom of receipts #}
 {% set hide_customer_specialorders = false %}   {# Hides Customer Special Order information at the bottom of receipts #}
-{% set hide_customer_workorders = false %}      {# Hides Customer Work Order information at the bottom of receipts #}
+{% set hide_customer_workorders = true %}      {# Hides Customer Work Order information at the bottom of receipts #}
 {% set hide_customer_credit_account = false %}  {# Hides Customer Credit Account information at the bottom of receipts #}
 
 {# Logos #}
@@ -90,25 +90,25 @@ body {
 
 h1 {
     margin: .5em 0 0;
-    font-size: 12pt;
+    font-size: 8pt;
     text-align: center;
 }
 
 p.date, p.copy {
-    font-size: 9pt;
+    font-size: 7pt;
     margin: 0;
     text-align: center;
 }
 
 p.details {
-    font-size: 10pt;
+    font-size: 8pt;
     text-align: left;
 }
 
 h2 {
     border-bottom: 1px solid black;
     text-transform: uppercase;
-    font-size: 10pt;
+    font-size: 8pt;
     margin: .5em 0 0;
 }
 
@@ -117,7 +117,7 @@ h2 {
 }
 
 .header h3 {
-    font-size: 12pt;
+    font-size: 8pt;
     margin: 0;
 }
 
