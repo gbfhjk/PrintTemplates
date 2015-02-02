@@ -141,6 +141,7 @@ table tbody th {
 }
 
 table td.amount, table th.amount {
+    width: 30%;
     text-align: right;
     white-space: nowrap
 }
