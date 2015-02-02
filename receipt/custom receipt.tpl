@@ -7,9 +7,9 @@ Set any of the options in this section from 'false' to 'true' in order to enable
 
 {# Item Lines #}
 
-{% set per_line_discount = false %}             {# Displays Discounts on each Sale Line #}
-{% set per_line_subtotal = false %}             {# Displays Subtotals for each Sale Line (ex. 1 x $5.00) #}
-{% set per_line_discounted_subtotal = false %}  {# Strikes out original subtotal and replaces it with discounted total #}
+{% set per_line_discount = true %}             {# Displays Discounts on each Sale Line #}
+{% set per_line_subtotal = true %}             {# Displays Subtotals for each Sale Line (ex. 1 x $5.00) #}
+{% set per_line_discounted_subtotal = true %}  {# Strikes out original subtotal and replaces it with discounted total #}
 {% set show_custom_sku = false %}               {# Adds SKU column for Custom SKU, if available, on each Sale Line #}
 {% set show_manufacturer_sku = false %}         {# Adds SKU column for Manufacturer SKU, if available, on each Sale Line #}
 
@@ -18,7 +18,7 @@ Set any of the options in this section from 'false' to 'true' in order to enable
 {% set transaction_item_count = false %}        {# Gives a total quantity of items sold near the bottom of the receipt #}
 {% set store_copy_show_lines = false %}         {# Shows Sale Lines on Credit Card Store Copy receipts #}
 {% set quote_to_invoice = false %}              {# Changes Quote wording to Invoice in Sales and in Sale Quotes (does not apply to Work Order Quotes) #}
-{% set gift_receipt_no_lines = false %}         {# Removes Sale Lines from Gift Receipts #}
+{% set gift_receipt_no_lines = true %}         {# Removes Sale Lines from Gift Receipts #}
 
 {# Customer information #}
 
