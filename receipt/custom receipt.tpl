@@ -106,7 +106,6 @@ p.details {
 }
 
 h2 {
-    border-bottom: 1px solid black;
     text-transform: uppercase;
     font-size: 8pt;
     margin: .5em 0 0;
