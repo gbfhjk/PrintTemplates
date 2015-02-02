@@ -9,7 +9,7 @@ Set any of the options in this section from 'false' to 'true' in order to enable
 
 {% set per_line_discount = true %}             {# Displays Discounts on each Sale Line #}
 {% set per_line_subtotal = false %}             {# Displays Subtotals for each Sale Line (ex. 1 x $5.00) #}
-{% set per_line_discounted_subtotal = false %}  {# Strikes out original subtotal and replaces it with discounted total #}
+{% set per_line_discounted_subtotal = true %}  {# Strikes out original subtotal and replaces it with discounted total #}
 {% set show_custom_sku = false %}               {# Adds SKU column for Custom SKU, if available, on each Sale Line #}
 {% set show_manufacturer_sku = false %}         {# Adds SKU column for Manufacturer SKU, if available, on each Sale Line #}
 
