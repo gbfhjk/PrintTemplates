@@ -1,3 +1,67 @@
+{#
+                            ***Begin Custom Options***
+Set any of the options in this section from 'false' to 'true' in order to enable them in the template
+#}
+
+{% set chrome_right_margin_fix = false %}       {# Fixes a potential issue where the right side of receipts are cut off in Chrome #}
+
+{# Item Lines #}
+
+{% set per_line_discount = true %}             {# Displays Discounts on each Sale Line #}
+{% set per_line_subtotal = false %}             {# Displays Subtotals for each Sale Line (ex. 1 x $5.00) #}
+{% set per_line_discounted_subtotal = true %}  {# Strikes out original subtotal and replaces it with discounted total #}
+{% set show_custom_sku = false %}               {# Adds SKU column for Custom SKU, if available, on each Sale Line #}
+{% set show_manufacturer_sku = false %}         {# Adds SKU column for Manufacturer SKU, if available, on each Sale Line #}
+
+{# Misc. adjustments #}
+
+{% set transaction_item_count = false %}        {# Gives a total quantity of items sold near the bottom of the receipt #}
+{% set store_copy_show_lines = false %}         {# Shows Sale Lines on Credit Card Store Copy receipts #}
+{% set quote_to_invoice = false %}              {# Changes Quote wording to Invoice in Sales and in Sale Quotes (does not apply to Work Order Quotes) #}
+{% set gift_receipt_no_lines = true %}         {# Removes Sale Lines from Gift Receipts #}
+
+{# Customer information #}
+
+{% set display_full_customer_address = false %} {# Displays Customer's full address, if available #}
+{% set customer_name_only = false %}            {# Hides all Customer information except for their name #}
+{% set show_customer_notes = false %}           {# Displays Notes entered in the Customer's profile #}
+
+{# Customer Account  #}
+
+{% set credit_account_signature = false %}      {# Prints Store Copy with signature line on accounts that use an Account Credit (not Deposit) #}
+{% set credit_account_agreement = 'I authorize the above charge to my Credit Account.' %}   {# The text that will display with the signature line #}
+
+{% set hide_customer_layaways = false %}        {# Hides Customer Layaway information at the bottom of receipts #}
+{% set hide_customer_specialorders = false %}   {# Hides Customer Special Order information at the bottom of receipts #}
+{% set hide_customer_workorders = false %}      {# Hides Customer Work Order information at the bottom of receipts #}
+{% set hide_customer_credit_account = false %}  {# Hides Customer Credit Account information at the bottom of receipts #}
+
+{# Logos #}
+
+{% set logo_width = '225px' %}                  {# Default width is 225px. A smaller number will scale logo down #}
+{% set multi_shop_logos = false %}              {# Allows multiple logos to be added for separate locations when used with options below #}
+
+{#
+    Use the following shop_logo_array to enter all of your locations and the link to the logo image that you have uploaded to the internet.
+    Enter your EXACT shop name (Case Sensitive!) in the Quotes after the "name": entry and then enter the URL to your logo after the "logo": entry.
+    Be sure to set the multi_shop_logos setting above to true in order to have these logos take effect!
+#}
+
+{% set shop_logo_array =
+    {
+        0:{"name":"Example Shop", "logo_url":"http://logo.url.goes/here.jpg"},
+        1:{"name":"", "logo_url":""},
+        2:{"name":"", "logo_url":""},
+        3:{"name":"", "logo_url":""},
+        4:{"name":"", "logo_url":""},
+        5:{"name":"", "logo_url":""}
+    }
+%}
+
+
+{#
+                            ***End Custom Options***
+
 {% extends parameters.print ? "printbase" : "base" %}
 {% block extrastyles %}
 
