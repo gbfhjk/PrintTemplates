@@ -8,7 +8,7 @@ Set any of the options in this section from 'false' to 'true' in order to enable
 {# Item Lines #}
 
 {% set per_line_discount = true %}             {# Displays Discounts on each Sale Line #}
-{% set per_line_subtotal = false %}             {# Displays Subtotals for each Sale Line (ex. 1 x $5.00) #}
+{% set per_line_subtotal = true %}             {# Displays Subtotals for each Sale Line (ex. 1 x $5.00) #}
 {% set per_line_discounted_subtotal = true %}  {# Strikes out original subtotal and replaces it with discounted total #}
 {% set show_custom_sku = false %}               {# Adds SKU column for Custom SKU, if available, on each Sale Line #}
 {% set show_manufacturer_sku = false %}         {# Adds SKU column for Manufacturer SKU, if available, on each Sale Line #}
@@ -170,8 +170,8 @@ table.payments { text-align: right; }
 table.spacer { margin-top: 1em; }
 table tr.total td { font-weight: bold; }
 
-table.sale { border-bottom: 1px solid black; }
-table.sale thead th { border-bottom: 1px solid black; }
+table.sale {  }
+table.sale thead th {  }
 
 table div.line_description {
     text-align: left;
