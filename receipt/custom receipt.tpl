@@ -38,7 +38,7 @@ Set any of the options in this section from 'false' to 'true' in order to enable
 
 {# Logos #}
 
-{% set logo_width = '225px' %}                  {# Default width is 225px. A smaller number will scale logo down #}
+{% set logo_width = '175px' %}                  {# Default width is 225px. A smaller number will scale logo down #}
 {% set multi_shop_logos = false %}              {# Allows multiple logos to be added for separate locations when used with options below #}
 
 {#
@@ -175,7 +175,7 @@ table.sale thead th {  }
 
 table div.line_description {
     text-align: left;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 table div.line_note {
@@ -205,7 +205,7 @@ table.workorders div.line_serial {
 }
 
 table.workorders td.workorder div.line_note {
-    font-weight: bold;
+    font-weight: normal;
     padding-left: 0px;
 }
 
