@@ -171,7 +171,7 @@ table.spacer { margin-top: 1em; }
 table tr.total td { font-weight: bold; }
 
 table.sale {  }
-table.sale thead th {border-top: 1px solid black;  }
+table.sale thead th {border-bottom: 1px solid black;  }
 
 table div.line_description {
     text-align: left;
