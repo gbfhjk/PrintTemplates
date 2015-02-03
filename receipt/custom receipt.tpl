@@ -174,7 +174,6 @@ table.sale {  }
 table.sale thead th { }
 
 table div.line_description {
-    {border-bottom: 1px solid black;}
     text-align: left;
     font-weight: normal;
 }
