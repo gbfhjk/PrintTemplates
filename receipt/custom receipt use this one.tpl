@@ -22,7 +22,7 @@ Set any of the options in this section from 'false' to 'true' in order to enable
 
 {# Customer information #}
 
-{% set display_full_customer_address = false %} {# Displays Customer's full address, if available #}
+{% set display_full_customer_address = true %} {# Displays Customer's full address, if available #}
 {% set customer_name_only = false %}            {# Hides all Customer information except for their name #}
 {% set show_customer_notes = false %}           {# Displays Notes entered in the Customer's profile #}
 
